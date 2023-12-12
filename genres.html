@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!--
+Programmer: Kyle Maavich
+Module 03 Course Project - Adding New Pages, Forms, and Web Storage to Your Application
+Class: Moblie Appliciation Development
+11/25/2023-->
+<html lang= "en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="themes/courseproject.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.2.5.min.js"></script>
+<title> Genres</title>
+</head>
+<!--Some CSS to add borders to my paragraphs and title-->
+<body>
+  <style>
+  .headcenter {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+  }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    color: white;
+}
+}
+</style>
+<div data-role="page" data-theme="c" data-add-back-btn="true">
+<div data-role="header" data-theme="c">
+ <div class="logo" style="background-color:#09151c"><img src="kyleslogo.png" width="240" height="130" alt=""/>
+ </div>
+ <div class="navbar">
+ <a href="http://sotd.us/kylemaavich/mobileapplicationdevelopment/CourseProject/index.html"><span><button>Homepage</button></span></a>
+ <a href="http://sotd.us/kylemaavich/mobileapplicationdevelopment/CourseProject/genres.html"><span><button>Genres</button></span></a>
+ <a href="http://sotd.us/kylemaavich/mobileapplicationdevelopment/CourseProject/albums.html"><span><button>Albums</button></span></a></div>
+ </div>
+ <div data-role="header">
+  <h1 class="headcenter">Kyles's Musical Journey</h1></div>
+<div data-role="main" class ="ui-content">
+
+    <p class="center"> Below is a list of many different genres that I have explored. Within each genre you will find many different Artists
+    showcasing many different interpretations of the genre they belong to.</p></div>
+    <div data-role="content">
+      <ul data-role="listview" data-theme="c">
+        <li><a href="#genre1"><img src="staricon.png" alt="star" class="ui-li-icon ui-corner-none">Ambient</a></li>
+        <li><a href="#genre2">PsyTrance</a></li>
+        <li><a href="#genre3">Rock</a></li>
+        <li><a href="#genre4">Metal</a></li>
+        <li><a href="#genre5">Rap</a></li>
+        <li><a href="#genre6">Orchestra</a></li>
+        <li><a href="#genre7">Pop</a></li>
+        <li><a href="#survey1">Share who you are and musical tastes!</a></li>
+      </ul>
+         </div>
+         <div data-role="footer" data-theme="c" style="background-color:#09151c">
+           <h4 style="font-family: 'Roboto', sans-serif; color: white"><b>Copyrighted for reasons &copy; 2023</b></h4></div>
+      </div>
+      <!--Ambient-->
+      <div id="genre1" data-role="page" data-theme="c" data-add-back-btn="true">
+       <div data-role="header" data-theme="c" data-add-back-btn="true">
+         <h1 class="center">Music Genres</h1>
+       </div>
+       <div data-role="content">
+         <h3 class="center">Ambient Artists</h3>
+         <a href="#" data-rel="back" class="ui-btn-left" data-icon="back" data-iconpos="notext">Back</a>
+         	<ul data-role="listview" data-filter="true">
+          <li><img src="staricon.png" alt="star" class="ui-li-icon ui-corner-none">Shpongle</li>
+          <li>Entheogenic</li>
+          <li>OTT</li>
+          <li>Carbon Based Lifeforms</li>
+          <li>Solar Fields</li>
+          <li>Astropilot</li>
+          <li>CBL (Carbon Based Lifeforms)</li>
+          <li>Younger Brother</li>
+          <li>Androcell</li>
+          <li>E-Mantra</li>
+      </ul>
+       </div>
+       <div data-role="footer" data-theme="c">
+         <h4 class="center">Copyrighted for reasons &copy; 2023</h4>
+       </div>
+      </div>
+      <!--Electronic-->
+      <div id="genre2" data-role="page" data-theme="c" data-add-back-btn="true">
+       <div data-role="header" data-theme="c" data-add-back-btn="true">
+         <h1 class="center">Music Genres</h1>
+       </div>
+       <div data-role="content">
+         <h3 class="center">Psytrance Artists</h3>
+         	<ul data-role="listview" data-filter="true">
+          <li>Infected Mushroom</li>
+          <li>Astral Projection</li>
+          <li>Vini Vici</li>
+          <li>Astrix</li>
+          <li>Ace Ventura</li>
+          <li>LOUD</li>
+          <li>Electric Universe</li>
+          <li>Phuture Primitive</li>
+          <li>Raja Ram</li>
+          <li>GMS (Growling Mad Scientists)</li>
+      </ul>
+       </div>
+       <div data-role="footer" data-theme="c">
+         <h4 class="center">Copyrighted for reasons &copy; 2023</h4>
+       </div>
+      </div>
+      <!--Rock-->
+      <div id="genre3" data-role="page" data-theme="c" data-add-back-btn="true">
+       <div data-role="header" data-theme="c" data-add-back-btn="true">
+         <h1 class="center">Music Genres</h1>
+       </div>
+       <div data-role="content">
+         <h3 class="center">Rock Artists</h3>
+         	<ul data-role="listview" data-filter="true">
+         <li>The Beatles</li>
+          <li>Led Zeppelin</li>
+          <li>Queen</li>
+          <li>Pink Floyd</li>
+          <li>The Rolling Stones</li>
+          <li>Alice Cooper</li>
+          <li>Thin Lizzy</li>
+          <li>Soundgarden</li>
+          <li>Stone Temple Pilots</li>
+          <li>The Cult</li>
+      </ul>
+       </div>
+       <div data-role="footer" data-theme="c">
+         <h4 class="center">Copyrighted for reasons &copy; 2023</h4>
+       </div>
+      </div>
+       <!--Metal-->
+      <div id="genre4" data-role="page" data-theme="c" data-add-back-btn="true">
+       <div data-role="header" data-theme="c" data-add-back-btn="true">
+         <h1 class="center">Music Genres</h1>
+       </div>
+       <div data-role="content">
+         <h3 class="center">Metal Artists</h3>
+         	<ul data-role="listview" data-filter="true">
+          <li>Black Sabbath</li>
+          <li>Metallica</li>
+          <li>Iron Maiden</li>
+          <li>Judas Priest</li>
+          <li>Slayer</li>
+          <li>Megadeth</li>
+          <li>Pantera</li>
+          <li>Motorhead</li>
+          <li>Tool</li>
+          <li>Slipknot</li>
+      </ul>
+       </div>
+       <div data-role="footer" data-theme="c">
+         <h4 class="center">Copyrighted for reasons &copy; 2023</h4>
+       </div>
+      </div>
+      <!--Rap-->
+      <div id="genre5" data-role="page" data-theme="c" data-add-back-btn="true">
+       <div data-role="header" data-theme="c" data-add-back-btn="true">
+         <h1 class="center">Music Genres</h1>
+       </div>
+       <div data-role="content">
+         <h3 class="center">Rap Artists</h3>
+         	<ul data-role="listview" data-filter="true">
+          <li>Jay-Z</li>
+          <li>Eminem</li>
+          <li>Nas</li>
+          <li>Notorious B.I.G. (Biggie Smalls)</li>
+          <li>Tupac Shakur</li>
+          <li>Kendrick Lamar</li>
+          <li>Drake</li>
+          <li>Kanye West</li>
+          <li>Snoop Dogg</li>
+          <li>OutKast (Andre 3000 and Big Boi)</li>
+      </ul>
+       </div>
+       <div data-role="footer" data-theme="c">
+         <h4 class="center">Copyrighted for reasons &copy; 2023</h4>
+       </div>
+      </div>
+             <!--Orchestra-->
+      <div id="genre6" data-role="page" data-theme="c" data-add-back-btn="true">
+       <div data-role="header" data-theme="c" data-add-back-btn="true">
+         <h1 class="center">Music Genres</h1>
+       </div>
+       <div data-role="content">
+         <h3 class="center">Orchestras</h3>
+         	<ul data-role="listview" data-filter="true">
+          <li>Berlin Philharmonic Orchestra (Germany)</li>
+          <li>Vienna Philharmonic Orchestra (Austria)</li>
+          <li>London Symphony Orchestra (United Kingdom)</li>
+          <li>New York Philharmonic (USA)</li>
+          <li>Chicago Symphony Orchestra (USA)</li>
+          <li>Boston Symphony Orchestra (USA)</li>
+          <li>Royal Concertgebouw Orchestra (Netherlands)</li>
+          <li>Los Angeles Philharmonic (USA)</li>
+          <li>Cleveland Orchestra (USA)</li>
+          <li>San Francisco Symphony (USA)</li>
+      </ul>
+       </div>
+       <div data-role="footer" data-theme="c">
+         <h4 class="center">Copyrighted for reasons &copy; 2023</h4>
+       </div>
+      </div>
+      <!--Pop-->
+      <div id="genre7" data-role="page" data-theme="c" data-add-back-btn="true">
+       <div data-role="header" data-theme="c" data-add-back-btn="true">
+         <h1 class="center">Music Genres</h1>
+       </div>
+       <div data-role="content">
+         <h3 class="center">Pop Artists</h3>
+         	<ul data-role="listview" data-filter="true">
+          <li>Michael Jackson</li>
+          <li> Madonna</li>
+          <li>The Beatles</li>
+          <li>Elvis Presley</li>
+          <li>Beyoncé</li>
+          <li>Justin Timberlake</li>
+          <li>Taylor Swift</li>
+          <li>Rihanna</li>
+          <li>Adele</li>
+          <li>Bruno Mars</li>
+      </ul>
+       </div>
+       <div data-role="footer" data-theme="c">
+         <h4 class="center">Copyrighted for reasons &copy; 2023</h4>
+       </div>
+      </div>
+      <!--Form and web storage-->
+      <div id="survey1" data-role="page"  data-theme="c" data-add-back-btn="true">
+      <div data-role="header" data-theme="c" data-add-back-btn="true">
+      <h1>Please fill out this short survey!</h1>
+      <a href="#" data-rel="back" class="ui-btn-left" data-icon="back" data-iconpos="notext">Back</a>
+</div>
+<div data-role="content">
+<!--question 1-->
+<form action="form.php" method="post">
+<label for="fname">First name:</label>
+<input type="text" name="fname" id="fname">
+<!--question 2-->
+  <fieldset data-role="controlgroup" data-type="horizontal">
+      <legend>Of these, which music do you like?</legend>
+      <input type="checkbox" name="checkbox-h-2a" id="checkbox-h-2a">
+      <label for="checkbox-h-2a">Rock</label>
+      <input type="checkbox" name="checkbox-h-2b" id="checkbox-h-2b">
+      <label for="checkbox-h-2b">Metal</label>
+      <input type="checkbox" name="checkbox-h-2c" id="checkbox-h-2c">
+      <label for="checkbox-h-2c">Rap</label>
+      <input type="checkbox" name="checkbox-h-2d" id="checkbox-h-2d">
+      <label for="checkbox-h-2d">Electronic</label>
+  </fieldset>
+  <!--question 3-->
+  <label for="email">Please enter your email:</label>
+  <input type="text" name="email" id="email">
+  <fieldset data-role="controlgroup">
+    <legend> Do you agree to the terms and conditions that don't exist?</legend>
+    <label for="checkbox1">I agree </label>
+    <input type="checkbox" name="checkbox1" id="checkbox1">
+    </fieldset>
+    <!--question 4-->
+  <fieldset data-role="controlgroup">
+      <legend>Do you want to receive daily music facts by email?:</legend>
+      <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2a" value="on" checked="checked">
+      <label for="radio-choice-v-2a">Yes I do!</label>
+      <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2b" value="off">
+      <label for="radio-choice-v-2b">No I don't!</label>
+  </fieldset>
+  <!--question 5-->
+  <label for="textarea-2">Comments or feedback?:</label>
+<textarea cols="40" rows="8" name="textarea-2" id="textarea-2">Please enter any comments or feedback you have!</textarea>
+<label for="submit-6">Send:</label>
+<button type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini">Submit</button>
+</form>
+</div>
+<div data-role="footer" data-theme="c">
+  <h4 class="center">Copyrighted for reasons &copy; 2023</h4>
+</div>
+</div>
+      </body>
+      </html>
+      <script>
+  (function() {
+      // Select all relevant input elements in the survey form
+      var firstNameInput = document.getElementById('fname');
+      var musicCheckboxInputs = document.querySelectorAll('[name^="checkbox-h-2"]');
+      var emailInput = document.getElementById('email');
+      var agreeCheckbox = document.getElementById('checkbox1');
+      var receiveFactsRadioOn = document.getElementById('radio-choice-v-2a');
+      var receiveFactsRadioOff = document.getElementById('radio-choice-v-2b');
+      var commentsTextarea = document.getElementById('textarea-2');
+
+      function supportsLocalStorage() {
+          return typeof(Storage) !== 'undefined';
+      }
+
+      if (supportsLocalStorage()) {
+          // Load saved values from localStorage
+          if (localStorage.getItem('surveyData')) {
+              var surveyData = JSON.parse(localStorage.getItem('surveyData'));
+              firstNameInput.value = surveyData.fname || '';
+              musicCheckboxInputs.forEach(function(checkbox, index) {
+                  checkbox.checked = surveyData['checkbox-h-2-' + (index + 1)] || false;
+              });
+              emailInput.value = surveyData.email || '';
+              agreeCheckbox.checked = surveyData.checkbox1 || false;
+              receiveFactsRadioOn.checked = surveyData['radio-choice-v-2'] === 'on';
+              receiveFactsRadioOff.checked = surveyData['radio-choice-v-2'] === 'off';
+              commentsTextarea.value = surveyData['textarea-2'] || '';
+          }
+
+          // Set up an event listener to save data on input change
+          var surveyForm = document.querySelector('form');
+          surveyForm.addEventListener('input', function() {
+              var dataToSave = {
+                  fname: firstNameInput.value,
+                  email: emailInput.value,
+                  'checkbox1': agreeCheckbox.checked,
+                  'radio-choice-v-2': receiveFactsRadioOn.checked ? 'on' : 'off',
+                  'textarea-2': commentsTextarea.value
+              };
+
+              // Save checkbox values
+              musicCheckboxInputs.forEach(function(checkbox, index) {
+                  dataToSave['checkbox-h-2-' + (index + 1)] = checkbox.checked;
+              });
+
+              // Save data to localStorage
+              localStorage.setItem('surveyData', JSON.stringify(dataToSave));
+          });
+
+          // Set up an event listener to clear localStorage when the form is submitted
+          surveyForm.addEventListener('submit', function() {
+              localStorage.removeItem('surveyData');
+          });
+      } else {
+          // Handle the case where localStorage is not supported
+          console.log('Your browser does not support localStorage.');
+      }
+  })();
+  </script>

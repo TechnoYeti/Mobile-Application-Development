@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!--
+Programmer: Kyle Maavich
+Module 03 Course Project - Adding New Pages, Forms, and Web Storage to Your Application
+Class: Moblie Appliciation Development
+11/25/2023-->
+<html lang= "en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="themes/courseproject.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.2.5.min.js"></script>
+<title> Albums</title>
+</head>
+<!--Some CSS to add borders to my paragraphs and title-->
+<body>
+  <style>
+     /* Additional styling for better mobile scaling */
+     .ui-grid-b > div {
+       width: 100% !important; /* Override default width to take full width on small screens */
+       margin: 0 !important; /* Override default margin */
+       box-sizing: border-box !important; /* Include padding and border in the width */
+     }
+
+     .ui-bar img {
+       max-width: 100%;
+       height: auto;
+       display: block;
+       margin: 0 auto;
+     }
+
+     .ui-bar {
+       text-align: center; /* Center text content */
+     }
+   </style>
+  <style>
+  .headcenter {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+  }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    color: white;
+}
+}
+</style>
+<div data-role="page" data-theme="b" data-add-back-btn="true">
+<div data-role="header" data-theme="b">
+ <div class="logo" style="background-color:#09151c"><img src="kyleslogo.png" width="240" height="130" alt=""/>
+      </div>
+
+ <div class="navbar">
+ <a href="http://sotd.us/kylemaavich/mobileapplicationdevelopment/CourseProject/index.html"><span><button>Homepage</button></span></a>
+ <a href="http://sotd.us/kylemaavich/mobileapplicationdevelopment/CourseProject/genres.html"><span><button>Genres</button></span></a>
+ <a href="http://sotd.us/kylemaavich/mobileapplicationdevelopment/CourseProject/albums.html"><span><button>Albums</button></span></a></div>
+</div>
+<div data-role="header">
+    <h1 class="headcenter">Kyles's Musical Journey</h1>
+ <a href="#mypanel" class="ui-btn ui-btn-inline">Click me to Choose an artist! </a>
+</div>
+<div data-role="main" class ="ui-content">
+  <h1>I would love to hear from you now! Tell me about your favorite music and store it in the database!</h1>
+  <ul id="favorites-list"></ul>
+
+    <label for="new-favorite">Add a new favorite:</label>
+    <input type="text" id="new-favorite" />
+    <button id="add-favorite">Add</button>
+  <button id="clear-saved">Clear Saved</button></div>
+
+ <div data-role="panel" id="mypanel">
+   <h2>Click to view information on specific artists!</h2>
+ <ul data-role="listview" data-theme="b" data-display="overlay">
+ <li class="menu"><a href="#shpongle">Shpongle</a></li>
+ <li class="menu"><a href="#infected">Infected Mushroom</a></li>
+ <li class="menu"><a href="#tool">Tool</a></li>
+ </ul>
+ </div>
+ <div data-role="footer" data-theme="b">
+   <h4 style="font-family: 'Roboto', sans-serif; color: white"><b>Copyrighted for reasons &copy; 2023</b></h4></div>
+ </div>
+<!--Shpongle-->
+ <div id="shpongle" data-role="page" data-theme="b">
+ 	<div data-role="header" data-theme="b">
+ 	  <h1>Discography</h1>
+     <a href="#" data-rel="back" class="ui-btn-left ui-btn ui-btn-icon-notext ui-corner-all ui-icon-back" role="button">Back</a>
+ 	</div>
+ 	<div data-role="content">
+ 	  <h3 class="headcenter">Shpongle</h3>
+    <div class="ui-grid-b">
+        <div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="shpong1.jpg">
+        <p> Are you Shpongled?</p>
+        <p>1998</p></div></div>
+        <div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="shpong2.jpg">
+        <p>Tales Of the Inexpressible</p>
+        <p>2001</p></div></div>
+        <div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="shpong3.jpg">
+        <p>Nothing Lasts but Nothing is Lost</p>
+        <p>2005</p>
+        </div></div>
+        <div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="shpong4.jpg">
+        <p>Ineffable Mysteries from Shpongleland</p>
+        <p>2009</p>
+        </div></div>
+        <div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="shpong5.jpg">
+        <p>Museum of Conciousness</p>
+        <p>2013</p>
+        </div></div>
+        <div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="shpong6.jpg">
+        <p>Codex VI</p>
+        <p>2017</p>
+        </div></div>
+    </div></div>
+  <div data-role="footer" data-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-left" role="button">Return to previous page</a>
+    <h4 class="center">Copyrighted for reasons &copy; 2023</h4>
+    </div></div>
+    <!--Infected Mushroom-->
+    <div id="infected" data-role="page" data-theme="b">
+    	<div data-role="header" data-theme="b">
+    	  <h1>Discography</h1>
+        <a href="#" data-rel="back" class="ui-btn-left ui-btn ui-btn-icon-notext ui-corner-all ui-icon-back" role="button">Back</a>
+    	</div>
+    	<div data-role="content">
+    	  <h3 class="headcenter">Infected Mushroom</h3>
+       <div class="ui-grid-b">
+           <div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="infected1.png">
+           <p> The Gathering</p>
+           <p>1999</p></div></div>
+
+           <div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="infected2.png">
+           <p>Converting Vegetarianse</p>
+           <p>2003</p></div></div>
+
+           <div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="infected3.png">
+           <p>I'm The Supervisor</p>
+           <p>2004</p></div></div>
+
+           <div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="infected4.png">
+           <p>Vicious Delicious</p>
+           <p>2007</p></div></div>
+
+           <div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="infected5.png">
+           <p>Army Of Mushrooms</p>
+           <p>2012</p> </div></div>
+
+           <div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="infected6.png">
+           <p>Return to the Sauce</p>
+           <p>2017</p> </div></div>
+       </div> </div>
+     <div data-role="footer" data-theme="b">
+       <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-left" role="button">Return to previous page</a>
+       <h4 class="center">Copyrighted for reasons &copy; 2023</h4>
+  </div></div>
+
+ <div id="tool" data-role="page" data-theme="b">
+ 	<div data-role="header" data-theme="b">
+ 	  <h1>Discography</h1>
+     <a href="#" data-rel="back" class="ui-btn-left ui-btn ui-btn-icon-notext ui-corner-all ui-icon-back" role="button">Back</a>
+ 	</div>
+ 	<div data-role="content">
+ 	  <h3 class="headcenter">Tool</h3>
+    <div class="ui-grid-b">
+        <div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="tool1.png">
+        <p>Opiate</p>
+        <p>1992</p></div></div>
+        <div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="tool2.png">
+        <p>Undertow</p>
+        <p>1993</p></div></div>
+        <div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="tool3.png">
+        <p>Aenima</p>
+        <p>1996</p>
+        </div></div>
+        <div class="ui-block-a"><div class="ui-bar ui-bar-a"><img src="tool4.png">
+        <p>Lateralus</p>
+        <p>2001</p>
+        </div></div>
+        <div class="ui-block-b"><div class="ui-bar ui-bar-a"><img src="tool5.png">
+        <p>10,000 Days</p>
+        <p>2006</p>
+        </div></div>
+        <div class="ui-block-c"><div class="ui-bar ui-bar-a"><img src="tool6.png">
+        <p>Fear Inoculum</p>
+        <p>2019</p>
+        </div></div>
+    </div>
+</div>
+  <div data-role="footer" data-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-left" role="button">Return to previous page</a>
+    <h4 class="center">Copyrighted for reasons &copy; 2023</h4>
+    </div></div>
+</body>
+</html>
+<script>
+    $(document).ready(function() {
+      // Function to retrieve favorites from Web Storage and display them
+      function displayFavorites() {
+        var favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        var $favoritesList = $('#favorites-list');
+
+        // Clear the current list
+        $favoritesList.empty();
+
+        // Display each favorite in the list
+        favorites.forEach(function(favorite) {
+          $favoritesList.append('<li>' + favorite + '</li>');
+        });
+      }
+
+      // Initial display of favorites
+      displayFavorites();
+
+      // Event listener for the "Add" button
+      $('#add-favorite').on('click', function() {
+        var newFavorite = $('#new-favorite').val();
+
+        if (newFavorite.trim() !== '') {
+          // Retrieve existing favorites from Web Storage
+          var favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+          // Add the new favorite
+          favorites.push(newFavorite);
+
+          // Save the updated favorites back to Web Storage
+          localStorage.setItem('favorites', JSON.stringify(favorites));
+
+          // Display the updated list of favorites
+          displayFavorites();
+
+          // Clear the input field
+          $('#new-favorite').val('');
+        }
+      });
+
+      // Event listener for the "Clear Saved" button
+      $('#clear-saved').on('click', function() {
+        // Clear all saved favorites from Web Storage
+        localStorage.removeItem('favorites');
+
+        // Clear the displayed list
+        $('#favorites-list').empty();
+      });
+    });
+  </script>

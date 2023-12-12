@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--
+Programmer: Kyle Maavich
+Class: Moblie Appliciation Development
+11/11/2023-->
+<html lang= "en">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="themes/courseproject.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.2.5.min.js"></script>
+<title> Mobile Application Development</title>
+</head>
+<!--Some CSS to add borders to my paragraphs and title-->
+<body>
+  <style>
+  .headcenter {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    color: white;
+  }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  color: white;
+}
+}
+.center2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
+<div data-role="page" data-theme="a" data-add-back-btn="true">
+<div data-role="header" data-theme="a">
+ <div class="logo" style="background-color:#09151c"><img src="kyleslogo.png" width="240" height="130" alt=""/>
+ </div>
+ <div class="navbar">
+ <a href="http://sotd.us/kylemaavich/mobileapplicationdevelopment/CourseProject/index.html"><span><button>Homepage</button></span></a>
+ <a href="http://sotd.us/kylemaavich/mobileapplicationdevelopment/CourseProject/genres.html"><span><button>Genres</button></span></a>
+ <a href="http://sotd.us/kylemaavich/mobileapplicationdevelopment/CourseProject/albums.html"><span><button>Albums</button></span></a></div>
+ </div>
+ <div data-role="header">
+  <h1 class="headcenter">Kyles's Musical Journey</h1></div>
+<div data-role="main" class ="ui-content">
+  <p class="center">Welcome to a musical journey designed for any type of musical tastes.
+    Embrace auditorial exploration with many different genres and
+    experiences with the music that's spread across many different
+    atmospheres. Music has always been a big passion of my life and I've
+    enjoyed a little bit from every type of genre.</p>
+    <p class="center">Learn more about music below! A brief lesson on what is music, it's historical makings,
+      how it influences society and types of genres can be found below! Along with my favorite music and
+      how my musical tastes have evolved over the years!</p></div>
+<div data-role="content">
+  <ul data-role="listview" data-theme="a">
+    <li><a href="#part1">What is music?</a></li>
+    <li><a href="#part2">History of music</a></li>
+    <li><a href="#part3">Music in society</a></li>
+    <li><a href="#part4">Types of genres</a></li>
+    <li><a href="#part5">My favorite music</a></li>
+    <li><a href="#part6">My evolution of musical tastes</a></li>
+  </ul>
+     </div>
+
+     <div data-role="footer" data-theme="a" style="background-color:#09151c">
+       <h4 style="font-family: 'Roboto', sans-serif; color: white"><b>Copyrighted for reasons &copy; 2023</b></h4></div>
+     </div>
+     <!--Section 1-->
+     <div id="part1" data-role="page" data-theme="a" data-add-back-btn="true">
+      <div data-role="header" data-theme="a" data-add-back-btn="true">
+        <h1 class="center">What is music?</h1>
+      </div>
+      <div data-role="content">
+        <h3 class="center">What is music?</h3>
+       <p class="center">Music is the art of combining sounds in a way that is pleasant to listen to.</p>
+       <p class="center">It involves elements like melody, harmony, rhythm, and often, lyrics.</p>
+       <p class="center"> Music can evoke emotions, tell stories, and bring people together, transcending language barriers.</p>
+       <p class="center"> It can be created using instruments, voices, or electronic means.</p>
+      </div>
+      <div data-role="footer" data-theme="a">
+        <h4 class="center">Copyrighted for reasons &copy; 2023</h4>
+      </div>
+     </div>
+     <!--Section 2-->
+       <div id="part2" data-role="page" data-theme="a" data-add-back-btn="true">
+        <div data-role="header" data-theme="a" data-add-back-btn="true">
+          <h1 class="center">Historical Music</h1>
+        </div>
+        <div data-role="content">
+          <h3 class="headcenter">History of Music</h3>
+        <img src="music.png" width="200" height="200" alt="Music" class="center">
+        <p class="center">The history of music is a captivating journey through human expression and creativity.
+           From the rhythmic beats of ancient drums and communal chants to the intricate compositions of classical
+            maestros, music has been an integral part of human culture. Across civilizations and epochs,
+            diverse musical traditions have emerged, shaped by the unique influences of geography, religion,
+            and societal norms.
+        </p></div>
+        <div data-role="footer" data-theme="a">
+          <h4 class="center">Copyrighted for reasons &copy; 2023</h4>
+        </div>
+       </div>
+       <!--Section 3-->
+       <div id="part3" data-role="page" data-theme="a" data-add-back-btn="true">
+        <div data-role="header" data-theme="a" data-add-back-btn="true">
+          <h1 class="center">Music in Society</h1>
+        </div>
+        <div data-role="content">
+          <h3 class="headcenter">Music in Society</h3>
+         <p class="center">In society, music plays a multifaceted and influential role, serving as a powerful means
+            of expression, communication, and cultural identity. It not only reflects the emotions and experiences
+             of individuals but also acts as a communal language that transcends linguistic and cultural boundaries.
+              Music has the capacity to shape and reflect social movements, from protest songs that advocate for
+              change to anthems that unite people under a shared identity. It contributes to the formation of
+              subcultures and communities, allowing individuals to connect with like-minded others who share similar
+              musical tastes. Moreover, music is integral to various aspects of human life, including entertainment,
+              rituals, celebrations, and personal reflection. Overall, it weaves through the fabric of society,
+              influencing and reflecting the collective human experience.</p>
+        </div>
+        <div data-role="footer" data-theme="a">
+          <h4 class="center">Copyrighted for reasons &copy; 2023</h4>
+        </div>
+       </div>
+<!--Section 4-->
+       <div id="part4" data-role="page" data-theme="a" data-add-back-btn="true">
+        <div data-role="header" data-theme="a" data-add-back-btn="true">
+          <h1 class="center">Genres</h1>
+        </div>
+        <div data-role="content">
+          <h3 class="headcenter">Types of Genres</h3>
+         <p class="center">Rock, Pop, Hip-Hop, Electronic, Country, Jazz, Blues, Reggae, Classical, R&B (Rhythm and Blues)
+           Punk, Metal, Folk, Funk, Soul, Indie, Gospel, Ska, Dubstep, Alternative, and many more!</p>
+        </div>
+        <div data-role="footer" data-theme="a">
+          <h4 class="center">Copyrighted for reasons &copy; 2023</h4>
+        </div>
+       </div>
+       <!--Section 5-->
+       <div id="part5" data-role="page" data-theme="a" data-add-back-btn="true">
+        <div data-role="header" data-theme="a" data-add-back-btn="true">
+          <h1 class="center">Musical taste</h1>
+        </div>
+        <div data-role="content">
+          <h3 class="headcenter">My musical taste</h3>
+         <h4 class="center">My favorite music lately is ambient and orchestra.</h4>
+         <p class="center"> This is because it is very relaxing and takes my mind on a visual journey
+           through the auditorial effects of music. It tells stories without words.</p>
+        </div>
+        <div data-role="footer" data-theme="a">
+          <h4 class="center">Copyrighted for reasons &copy; 2023</h4>
+        </div>
+       </div>
+       <!--Section 6-->
+       <div id="part6" data-role="page" data-theme="a" data-add-back-btn="true">
+        <div data-role="header" data-theme="a" data-add-back-btn="true">
+          <h1 class="center">Evolution of Music</h1>
+        </div>
+        <div data-role="content">
+          <h3 class="headcenter">My evolution of musical tastes</h3>
+         <p class="center">My musical tastes have evolved over many years of listening!
+         When I was young I enjoyed a lot of pop music but started to grow into hard Rock
+       in my preteen years, to full blown heavy metal into my teenage years. As I continued
+     to explore music, I discovered electronic music and fell in love with it and it has been
+   a staple of my music collection ever since. Right now I'm particular fond of symphonic music,
+ atmospheric music, and ambient music. It allows me to focus more deeply on schoolwork and
+aids in my creativity. </p>
+        </div>
+        <div data-role="footer" data-theme="a">
+          <h4 class="center">Copyrighted for reasons &copy; 2023</h4>
+        </div>
+       </div>
+        </body>
+        </html>
